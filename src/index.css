@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: 0 0% 100%;
+    --color-foreground: 215 20% 18%;
+    --color-primary: 215 65% 46%;
+    --color-primary-foreground: 0 0% 100%;
+    --color-secondary: 215 60% 56%;
+    --color-secondary-foreground: 0 0% 100%;
+    --color-tertiary: 260 45% 52%;
+    --color-tertiary-foreground: 0 0% 100%;
+    --color-neutral: 210 9% 96%;
+    --color-neutral-foreground: 215 20% 18%;
+    --color-success: 150 45% 45%;
+    --color-success-foreground: 0 0% 100%;
+    --color-warning: 40 90% 50%;
+    --color-warning-foreground: 215 20% 18%;
+    --color-muted: 210 9% 96%;
+    --color-muted-foreground: 210 8% 40%;
+    --color-accent: 210 9% 96%;
+    --color-accent-foreground: 215 65% 46%;
+    --color-border: 210 15% 90%;
+    --color-input: 210 15% 90%;
+    --color-ring: 215 70% 65%;
+    --color-card: 0 0% 100%;
+    --color-card-foreground: 215 20% 18%;
+    --color-popover: 0 0% 100%;
+    --color-popover-foreground: 215 20% 18%;
+    --color-destructive: 0 84% 60%;
+    --color-destructive-foreground: 0 0% 100%;
+    
+    --font-sans: "Inter", sans-serif;
+    --font-heading: "DM Sans", sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
+    
+    --radius: 8px;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
